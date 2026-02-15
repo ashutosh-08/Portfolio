@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: 'WatchNest',
       year: '2024-25',
-      LiveLink: 'https://watch-nest-theta.vercel.app/',
+      liveUrl: 'https://watch-nest-theta.vercel.app/',
       description: 'A full-stack video-sharing platform inspired by YouTube, featuring robust user authentication, video uploads, and seamless playback experiences with scalable cloud storage integration.',
       highlights: [
         'Built with React.js frontend and Node.js + Express.js backend for optimal performance',
@@ -21,7 +21,7 @@ const Projects = () => {
     {
       title: 'ZenTask',
       year: '2023-24',
-      LiveLink: 'https://zentask-seven.vercel.app/',
+      liveUrl: 'https://zentask-seven.vercel.app/',
       description: 'A task management dashboard built with React and Redux, featuring centralized state management, real-time task synchronization, and event-driven architecture for seamless user experience.',
       highlights: [
         'Established centralized global store managing dynamic data, filters, and UI state',
@@ -66,7 +66,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LiveLink
+                Live Link
                 <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
