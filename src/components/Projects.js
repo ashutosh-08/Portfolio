@@ -6,6 +6,8 @@ const Projects = () => {
     {
       title: 'WatchNest',
       year: '2024-25',
+      liveUrl: 'https://watch-nest-theta.vercel.app/',
+      sourceUrl: 'https://github.com/ashutosh-08/WatchNest',
       description: 'A full-stack video-sharing platform inspired by YouTube, featuring robust user authentication, video uploads, and seamless playback experiences with scalable cloud storage integration.',
       highlights: [
         'Built with React.js frontend and Node.js + Express.js backend for optimal performance',
@@ -20,6 +22,8 @@ const Projects = () => {
     {
       title: 'ZenTask',
       year: '2023-24',
+      liveUrl: 'https://zentask-seven.vercel.app/',
+      sourceUrl: 'https://github.com/ashutosh-08/ZenTask',
       description: 'A task management dashboard built with React and Redux, featuring centralized state management, real-time task synchronization, and event-driven architecture for seamless user experience.',
       highlights: [
         'Established centralized global store managing dynamic data, filters, and UI state',
@@ -57,6 +61,26 @@ const Projects = () => {
                 {project.tech.map((tech, idx) => (
                   <span key={idx} className="tech-badge">{tech}</span>
                 ))}
+              </div>
+              <div className="project-links">
+                <a
+                  href={project.liveUrl}
+                  className="project-live-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Link
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href={project.sourceUrl}
+                  className="project-source-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
               </div>
             </div>
           </div>

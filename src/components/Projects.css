@@ -105,3 +105,107 @@
   color: var(--accent-primary);
   font-family: 'JetBrains Mono', monospace;
 }
+
+.project-links {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.project-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 12px;
+  color: var(--accent-primary);
+  text-decoration: none;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  background:
+    linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+    linear-gradient(120deg, rgba(0, 212, 255, 0.6), rgba(124, 58, 237, 0.6), rgba(6, 255, 165, 0.6)) border-box;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.project-live-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 25%, rgba(255, 255, 255, 0.22) 50%, transparent 75%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.project-live-link:hover::before {
+  transform: translateX(120%);
+}
+
+.project-live-link:hover {
+  transform: translateY(-2px);
+  color: #d7f8ff;
+  box-shadow: 0 14px 34px rgba(0, 212, 255, 0.22);
+}
+
+.project-live-link span {
+  transition: transform 0.25s ease;
+}
+
+.project-live-link:hover span {
+  transform: translate(2px, -2px);
+}
+
+.project-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 12px;
+  color: #e9ddff;
+  text-decoration: none;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background:
+    linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+    linear-gradient(120deg, rgba(124, 58, 237, 0.8), rgba(0, 212, 255, 0.55)) border-box;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.project-source-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 25%, rgba(255, 255, 255, 0.2) 50%, transparent 75%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.project-source-link:hover::before {
+  transform: translateX(120%);
+}
+
+.project-source-link:hover {
+  transform: translateY(-2px);
+  color: #f5efff;
+  box-shadow: 0 14px 34px rgba(124, 58, 237, 0.24);
+}
+
+.project-source-link span {
+  transition: transform 0.25s ease;
+}
+
+.project-source-link:hover span {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 768px) {
+  .project-live-link,
+  .project-source-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
