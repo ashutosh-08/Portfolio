@@ -66,7 +66,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Live Link
+                LiveLink
                 <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
